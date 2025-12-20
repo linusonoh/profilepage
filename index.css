@@ -4,83 +4,104 @@
     box-sizing: border-box;
 }
 
-
 body {
     background-image: url('ChatGPT Image Dec 20, 2025, 10_24_40 AM.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    background-repeat: no-repeat;       
+    background-position: center ; 
+    background-size: contain;             
+    background-attachment: fixed;       
     height: 100vh;
+    font-family: Arial, sans-serif;
     margin: 0;
 }
 
-.header {
-    display: flex;
-    justify-content: space-around;
-    
-}
 
-.linus {
-    font-size: xxx-large;
-    color: rgb(158, 201, 235);
-    margin-left: 500px;
-
-}
-.about-me p {
-    font-size: large;
-    color: rgb(88, 82, 116);
-    margin-left: 500px;
-    margin-top: 20px;
-    line-height: 1.6;
-    font-size: x-large;
-}
-
+/* Left-side Vertical Navbar */
 .left-nav {
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 180px;
-    background-color: rgba(0,0,0,0.5);
+    background-color: transparent; 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    padding-top: 20px;
 }
 
+/* Logo at top */
+.left-nav .logo {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.3); 
+    margin-bottom: 40px; 
+}
+
+.left-nav .logo img {
+    width: 80%; 
+    height: auto;
+    border-radius: 10px; 
+}
+
+/* Nav list */
 .left-nav ul {
     list-style: none;
     display: flex;
-    flex-direction: row; /* horizontal items */
-    transform: rotate(-90deg); /* rotate menu to vertical space */
+    flex-direction: column; 
+    width: 100%;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .left-nav li {
-    margin: 20px;
+    margin: 20px 0; 
 }
 
 .left-nav a {
-    color: #cce7ff;
+    color: #213241; 
     text-decoration: none;
     font-weight: bold;
     transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 
 .left-nav a:hover {
     color: #fff;
     background-color: rgba(204,231,255,0.3);
-    padding: 5px 10px;
+    padding: 5px 0;
     border-radius: 5px;
 }
 
-.left-nav .logo {
-    width: 100%;
-    padding: 20px 0;
-    text-align: center;
-    border-bottom: 1px solid rgba(255,255,255,0.3); /* optional separator */
+/* Right-aligned About Me Section */
+.header {
+    margin-left: 200px; /* space for navbar */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    padding-right: 50px;
 }
 
-.left-nav .logo img {
-    width: 80%; /* fills most of navbar width */
-    height: auto;
-    border-radius: 10px; /* optional rounded corners */
+.about-me {
+    background-color: rgba(255,255,255,0.7); /* semi-transparent */
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+}
+
+.linus {
+    font-size: 3rem;
+    color: rgb(158, 201, 235);
+    margin-bottom: 20px;
+}
+
+.about-me p {
+    font-size: 1.3rem;
+    color: rgb(88, 82, 116);
+    line-height: 1.6;
 }
