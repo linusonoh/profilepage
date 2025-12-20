@@ -1,0 +1,28 @@
+* {
+    margin: o;
+    padding: 0;
+    
+}
+
+
+body {
+    background-image: url('ChatGPT Image Dec 20, 2025, 10_24_40 AM.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 100vh;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.linus {
+    font-size: xxx-large;
+    color: rgb(158, 201, 235);
+    margin-left: 500px;
+
+}
