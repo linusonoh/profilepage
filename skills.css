@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url('ChatGPT Image Dec 20, 2025, 10_24_40 AM.png');
+    background-image: url('');
     background-repeat: no-repeat;       
     background-position: center ; 
     background-size: contain;             
@@ -175,6 +175,88 @@ body {
 .left-nav a {
     z-index: 1;
 }
+
+/* Skills Section */
+.skills-visual {
+    margin-left: 200px; /* space for left navbar */
+    padding: 50px;
+    max-width: 500px;
+}
+
+.skills-visual .linus {
+    font-size: 3rem;
+    color: rgb(158, 201, 235);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.skill-bar-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skill-bar {
+    height: 25px;
+    width: 0; /* start from 0 for animation */
+    border-radius: 15px;
+    background-color: #4da6ff; /* default color */
+    transition: width 1.5s ease-in-out;
+}
+
+/* Animate bars on page load */
+.skill-bar {
+    animation: fillBar 1.5s forwards;
+}
+
+@keyframes fillBar {
+    to {
+        width: var(--level);
+    }
+}
+
+/* ===== Skills Section (No Bars) ===== */
+
+.skills-visual {
+    margin-left: 200px;
+    padding: 50px;
+    max-width: 700px;
+}
+
+.skills-group {
+    margin-bottom: 40px;
+}
+
+.skills-title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #213241;
+    letter-spacing: 0.5px;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills-tags span {
+    padding: 8px 14px;
+    font-size: 0.95rem;
+    border-radius: 20px;
+    background-color: rgba(200, 230, 255, 0.5);
+    color: #0b2a3a;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.skills-tags span:hover {
+    background-color: rgba(180, 220, 255, 0.8);
+    box-shadow: 0 4px 14px rgba(180, 220, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+
 
 
     
