@@ -9,8 +9,8 @@
 body {
     background-image: url('ChatGPT Image Dec 23, 2025, 09_10_48 AM.png');
     background-repeat: no-repeat;
-    background-position: 90% center; /* keep desktop look */
-    background-size: contain;        /* preserve desktop background size */
+    background-position: 90% center; 
+    background-size: contain;        
     background-attachment: fixed;
     font-family: Arial, sans-serif;
     min-height: 100vh;
