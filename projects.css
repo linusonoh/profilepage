@@ -160,6 +160,20 @@ body {
 }
 
 
+.left-nav .logo img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    animation: floatLogo 4s ease-in-out infinite;
+}
+
+@keyframes floatLogo {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+
 /* FLOATING SOCIAL ICONS */
 .social-logo {
     position: fixed;
@@ -178,4 +192,82 @@ body {
 
 .social-logo img:hover {
     transform: scale(1.1);
+}
+
+/* ================= HAMBURGER ================= */
+.hamburger {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    width: 30px;
+    height: 25px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #213241;
+    border-radius: 3px;
+    transition: all 0.4s ease;
+}
+
+/* Hamburger animation */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ================= MOBILE RESPONSIVENESS ================= */
+@media (max-width: 599px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .left-nav {
+        left: -180px;
+        width: 180px;
+        height: 100%;
+        background-color: rgba(255,255,255,0.85);
+        backdrop-filter: blur(12px);
+        transition: left 0.4s ease;
+        z-index: 1500;
+    }
+
+    .left-nav.active {
+        left: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+    .projects-grid {
+        gap: 20px;
+    }
+
+    .social-logo {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 15px;
+    }
+}
+
+/* Hide sidebar on small tablets like homepage */
+@media (min-width: 600px) and (max-width: 991px) {
+    .left-nav {
+        display: none;
+    }
 }
